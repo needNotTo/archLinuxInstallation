@@ -32,7 +32,7 @@ echo mount
     sleep 2
 echo install system
     sleep 2
-    pacstrap /mnt base base-devel linux linux-firmware vim wpa_supplicant netctl dialog dhcpcd grub
+    pacstrap /mnt base base-devel linux linux-firmware vim wpa_supplicant netctl dialog dhcpcd grub git
     sleep 2
     genfstab -Lp /mnt > /mnt/etc/fstab
     sleep 2
