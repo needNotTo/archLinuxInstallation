@@ -18,7 +18,7 @@ echo format disk
     mkfs.ext4 /dev/sda2
     echo verschlüsselte partition
     sleep 2
-        cryptsetup -v -y --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 2000 --use-urandom --verify-passphrase luksFormat /dev/sda2
+        cryptsetup -v -y --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 2000 --use-urandom --verify-passphrase luksFormat /dev/sda3
     sleep 2
     cryptsetup open /dev/sda3 SYSTEM
     sleep 2
