@@ -1,9 +1,11 @@
 #!/bin/bash
+<<COMMENT
 echo german keybordLayout
     loadkeys de 
 
 echo connect to network
     iwctl
+COMMENT
 echo format disk
     dd if=/dev/zero of=/dev/sda     <<enter the partition name
     fdisk /dev/sda
