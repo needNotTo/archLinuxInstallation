@@ -29,7 +29,11 @@ echo mount
     sleep 2
     mkdir /mnt/boot
     sleep 2
-    mount /dev/sda1 /mnt/boot
+    mount /dev/sda2 /mnt/boot
+    sleep 2
+    mkdir /mnt/boot/efi
+    sleep 2
+    mount /dev/sda1 /mnt/boot/efi
     sleep 2
 echo install system
     sleep 2
