@@ -13,8 +13,9 @@ echo enter and customize system
     echo add multilib
     vim /etc/pacman.conf
     passwd
-    echo for BIOS installation
-    grub-install --target=i386-pc /dev/sda
+    echo for UEFI installation
+    pacman -Sy efibootmgr dosfstools gptfdisk
+    grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=archGrub --recheck
     echo add GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda2:SYSTEM root=/dev/mapper/SYSTEM"
     vim /etc/default/grub
     grub-mkconfig -o /boot/grub/grub.cfg
